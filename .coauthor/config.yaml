@@ -11,8 +11,8 @@ SoftwareClassification:
     HazardousSituationPossible: false
   SafetyClass: A
   Rationale: |
-    This is a class A rationale
-    This is a class A rationale
+    Failure of this application does not cause any hazardous situations.
+    For the reason above, this is classified as Class A
 TestingTools:
   SystemTesting:
     - Cucumber
