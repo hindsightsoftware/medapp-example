@@ -78,6 +78,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+      - name: Install XCBeautify
+        run: |
+          cd ..
+          git clone https://github.com/cpisciotta/xcbeautify.git
+          cd xcbeautify
+          make install
+          ls -l    
       - name: Install CDXGen and build SBOM
         run: |
           npm install -g @cyclonedx/cdxgen
