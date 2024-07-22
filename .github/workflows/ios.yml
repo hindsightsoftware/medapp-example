@@ -114,7 +114,10 @@ jobs:
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
 
           # Run the tests and generate a junit report using xcpretty
-          xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device" | xcbeautify --renderer github-actions --report junit ----report-path ${{ env.path_test_reports }}
+          xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device" | xcbeautify --renderer github-actions --report junit
+          ls -l ./build/reports/
+          mv ./build/reports/junit.xml ${{ env.path_test_reports }}/junit.xml
+          ls -l ${{ env.path_test_reports }}
           
           # Display the junit file content
           cat ${{ env.path_test_reports }}/junit.xml 
