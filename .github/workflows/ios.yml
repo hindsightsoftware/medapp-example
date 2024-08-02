@@ -32,7 +32,6 @@ jobs:
           evidence: 'system-verification'
           type: 'bdd'
           format: 'cucumber+ndjson'
-          hostname: ${{ vars.UPLOAD_JOB }}
           path: '${{ env.path_system }}/**'
   build:
     name: Build and Test default scheme using any available iPhone simulator
@@ -85,7 +84,6 @@ jobs:
           evidence: 'cybersecurity'
           type: 'sbom'
           format: 'cyclonedx'
-          hostname: ${{ vars.UPLOAD_JOB }}
           path: '${{ env.path_sbom }}/**'
       - name: Install XCBeautify 2.4.1
         run: |
@@ -129,7 +127,6 @@ jobs:
           type: 'test'
           format: 'junit'
           path: ${{ env.path_test_reports }}
-          hostname: ${{ vars.UPLOAD_JOB }}
       - name: Upload Cucumber Test Results
         uses: actions/upload-artifact@v4
         with:
