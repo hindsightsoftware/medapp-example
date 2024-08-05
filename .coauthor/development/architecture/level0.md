@@ -1,3 +1,8 @@
+---
+title: Level 0 diagram
+category: architecture
+---
+
 Here is a simple flow chart:
 
 ```mermaid
