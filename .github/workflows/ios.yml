@@ -33,7 +33,6 @@ jobs:
           type: 'bdd'
           format: 'cucumber+ndjson'
           path: '${{ env.path_system }}/**'
-          hostname: 'sao2zyjy5e.execute-api.eu-west-1.amazonaws.com'
   build:
     name: Build and Test default scheme using any available iPhone simulator
     runs-on: macos-latest
@@ -86,7 +85,6 @@ jobs:
           type: 'sbom'
           format: 'cyclonedx'
           path: '${{ env.path_sbom }}/**'
-          hostname: 'sao2zyjy5e.execute-api.eu-west-1.amazonaws.com'
       - name: Install XCBeautify 2.4.1
         run: |
           # Install xcbeautify from source, used to generate junit file from xcodebuild output
@@ -129,7 +127,6 @@ jobs:
           type: 'test'
           format: 'junit'
           path: ${{ env.path_test_reports }}
-          hostname: 'sao2zyjy5e.execute-api.eu-west-1.amazonaws.com'
       - name: Upload Cucumber Test Results
         uses: actions/upload-artifact@v4
         with:
