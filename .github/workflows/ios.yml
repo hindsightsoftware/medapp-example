@@ -87,13 +87,13 @@ jobs:
           format: 'cyclonedx'
           path: '${{ env.path_sbom }}/**'
           hostname: 'sao2zyjy5e.execute-api.eu-west-1.amazonaws.com'
-      - name: Install XCBeautify 2.4.1
+      - name: Install XCBeautify 2.11.0
         run: |
           # Install xcbeautify from source, used to generate junit file from xcodebuild output
           cd ..
           git clone https://github.com/cpisciotta/xcbeautify.git
           cd xcbeautify
-          git checkout tags/2.4.1
+          git checkout tags/2.11.0
           make install
       - name: Test
         id: run-tests
@@ -130,10 +130,3 @@ jobs:
           format: 'junit'
           path: ${{ env.path_test_reports }}
           hostname: 'sao2zyjy5e.execute-api.eu-west-1.amazonaws.com'
-      - name: Upload Cucumber Test Results
-        uses: actions/upload-artifact@v4
-        with:
-         name: cucumber-test-results
-         path: ${{ steps.run-tests.outputs.report_file }}
-         
-         
