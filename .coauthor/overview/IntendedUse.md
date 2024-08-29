@@ -10,7 +10,7 @@ This document provides a detailed description of the intended use of the **Med A
 
 ### 2. Application Overview
 
-The Application is a dummy application showcasing Coauthor as a compliance assistant to help development team to setup compliance development processess for SaMD in minutes.
+The Application is a dummy application showcasing Coauthor as a compliance assistant to help dev team to setup compliance development processess for SaMD in minutes.
 
 ### 3. Intended Users
 
