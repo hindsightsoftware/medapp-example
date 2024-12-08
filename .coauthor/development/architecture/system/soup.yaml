@@ -1,6 +1,6 @@
 Name: System
 SOUP:
-  - PURL: pkg:swift/github.com/aws-amplify/amplify-swift@2.35.5
+  - PURL: pkg:swift/github.com/aws-amplify/amplify-swift@2.0.1
     Manufacturer: AWS
     PackageManager: Swift Package Manager
     Requirement: |
@@ -16,11 +16,11 @@ SOUP:
     VerificationReasoning: |
       Verification Reasoning Line 1
       Verification Reasoning Line 2
-  - PURL: pkg:swift/github.com/awslabs/aws-crt-swift@0.26.0
+  - PURL: pkg:swift/github.com/awslabs/a-wrong-package@0.26.0
     Manufacturer: AWS
     PackageManager: Swift Package Manager
     Requirement: |
-      This is AWS CRT in the iOS application.
+      This package is not in SBOM
     VerificationReasoning: |
       Verification Reasoning Line 1
       Verification Reasoning Line 2
